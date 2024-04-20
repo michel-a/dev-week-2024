@@ -5,7 +5,7 @@ spring:
     driverClassName: org.h2.Driver
     url: jdbc:h2:mem:dw2024
     user: dw2024
-    password: dw2024
+    password:
   jpa:
     show-sql: true
     open-in-view: false
