@@ -8,7 +8,7 @@ group = 'com.malves'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	sourceCompatibility = '21'
+	sourceCompatibility = '17'
 }
 
 repositories {
@@ -23,6 +23,12 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.jar {
+	manifest {
+		attributes["Main-Class"] = "com.malves.devweek2024.Application"
+	}
 }
 
 tasks.named('test') {
